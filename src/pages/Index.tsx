@@ -2,7 +2,10 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import MissionSection from "@/components/MissionSection";
 import WorldSection from "@/components/WorldSection";
+import MediaSection from "@/components/MediaSection";
+import FooterSection from "@/components/FooterSection";
 import fullBg from "@/assets/full-bg.png";
+import mediaBg from "@/assets/media-bg.png";
 
 const Index = () => {
   return (
@@ -30,6 +33,22 @@ const Index = () => {
 
         {/* The World Section */}
         <WorldSection />
+
+        {/* Media + Footer with shared background */}
+        <div className="relative overflow-hidden">
+          {/* Shared background image for Media and Footer */}
+          <img
+            src={mediaBg}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          />
+          
+          {/* Content layered above background */}
+          <div className="relative z-10">
+            <MediaSection />
+            <FooterSection />
+          </div>
+        </div>
       </div>
     </div>
   );
