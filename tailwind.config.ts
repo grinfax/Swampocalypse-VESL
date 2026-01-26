@@ -57,6 +57,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        swamp: {
+          orange: "hsl(var(--swamp-orange))",
+          red: "hsl(var(--swamp-red))",
+          green: "hsl(var(--swamp-green))",
+          brown: "hsl(var(--swamp-brown))",
+          cream: "hsl(var(--swamp-cream))",
+        },
+      },
+      fontFamily: {
+        display: ["'Bebas Neue'", "sans-serif"],
+        sans: ["'Open Sans'", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
