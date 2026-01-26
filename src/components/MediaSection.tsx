@@ -259,7 +259,7 @@ const MediaSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="font-display text-5xl md:text-6xl tracking-wider text-swamp-cream mb-4">
-            MEDIA
+            GAMEPLAY
           </h2>
           <div className="flex items-center justify-center gap-4">
             <div className="h-px w-16 bg-swamp-cream/40" />
