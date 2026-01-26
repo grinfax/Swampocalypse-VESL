@@ -150,53 +150,103 @@
     background-clip: text;
   }
 
-  .mission-card {
-    @apply relative bg-swamp-brown border border-border p-6 overflow-hidden;
+  /* Glassmorphic Mission Card */
+  .mission-card-glass {
+    @apply relative p-6 overflow-hidden;
+    background: hsla(var(--background) / 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsla(var(--border) / 0.3);
   }
 
-  .mission-card::after {
+  /* Neon glow at top of card */
+  .mission-card-glass::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     height: 3px;
+    transition: all 0.4s ease;
   }
 
-  .mission-card-orange::after {
-    background: linear-gradient(90deg, hsl(40, 100%, 60%) 0%, hsl(30, 100%, 45%) 50%, transparent 100%);
-  }
-
-  .mission-card-red::after {
-    background: linear-gradient(90deg, hsl(0, 80%, 55%) 0%, hsl(350, 70%, 40%) 50%, transparent 100%);
-  }
-
-  .mission-card-green::after {
-    background: linear-gradient(90deg, hsl(120, 70%, 55%) 0%, hsl(140, 60%, 35%) 50%, transparent 100%);
-  }
-
-  .gameplay-btn {
-    @apply relative px-8 py-3 bg-transparent border-2 border-foreground/50 text-foreground font-display text-lg tracking-wider flex items-center gap-3 transition-all duration-300;
-    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
-  }
-
-  .gameplay-btn::before {
+  .mission-card-glass::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, transparent 6px, hsl(var(--foreground) / 0.1) 6px);
-    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
-    transition: all 0.3s;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    opacity: 0.3;
+    transition: all 0.4s ease;
+    pointer-events: none;
   }
 
-  .gameplay-btn:hover::before {
-    background: linear-gradient(135deg, transparent 6px, hsl(var(--foreground) / 0.2) 6px);
+  /* Orange card neon */
+  .mission-card-orange::before {
+    background: linear-gradient(90deg, transparent 0%, hsl(40, 100%, 60%) 30%, hsl(30, 100%, 45%) 70%, transparent 100%);
+    box-shadow: 0 0 20px hsl(35, 100%, 50% / 0.5);
+  }
+  .mission-card-orange::after {
+    background: linear-gradient(180deg, hsl(35, 100%, 50% / 0.3) 0%, transparent 100%);
+  }
+  .mission-card-orange:hover::before {
+    box-shadow: 0 0 30px hsl(35, 100%, 50% / 0.8), 0 0 60px hsl(35, 100%, 50% / 0.4);
+  }
+  .mission-card-orange:hover::after {
+    opacity: 0.6;
+    height: 100px;
   }
 
-  .gameplay-btn span,
-  .gameplay-btn svg {
-    position: relative;
-    z-index: 1;
+  /* Red card neon */
+  .mission-card-red::before {
+    background: linear-gradient(90deg, transparent 0%, hsl(0, 80%, 55%) 30%, hsl(350, 70%, 40%) 70%, transparent 100%);
+    box-shadow: 0 0 20px hsl(0, 80%, 50% / 0.5);
+  }
+  .mission-card-red::after {
+    background: linear-gradient(180deg, hsl(0, 80%, 50% / 0.3) 0%, transparent 100%);
+  }
+  .mission-card-red:hover::before {
+    box-shadow: 0 0 30px hsl(0, 80%, 50% / 0.8), 0 0 60px hsl(0, 80%, 50% / 0.4);
+  }
+  .mission-card-red:hover::after {
+    opacity: 0.6;
+    height: 100px;
+  }
+
+  /* Green card neon */
+  .mission-card-green::before {
+    background: linear-gradient(90deg, transparent 0%, hsl(120, 70%, 55%) 30%, hsl(140, 60%, 35%) 70%, transparent 100%);
+    box-shadow: 0 0 20px hsl(120, 70%, 50% / 0.5);
+  }
+  .mission-card-green::after {
+    background: linear-gradient(180deg, hsl(120, 70%, 50% / 0.3) 0%, transparent 100%);
+  }
+  .mission-card-green:hover::before {
+    box-shadow: 0 0 30px hsl(120, 70%, 50% / 0.8), 0 0 60px hsl(120, 70%, 50% / 0.4);
+  }
+  .mission-card-green:hover::after {
+    opacity: 0.6;
+    height: 100px;
+  }
+
+  /* Neon Gameplay Button */
+  .gameplay-btn-neon {
+    @apply relative px-10 py-4 flex items-center gap-3 transition-all duration-300 cursor-pointer;
+    background: transparent;
+    border: 2px solid hsl(35, 80%, 60% / 0.6);
+    border-radius: 8px;
+    box-shadow: 
+      0 0 15px hsl(35, 100%, 50% / 0.3),
+      inset 0 0 15px hsl(35, 100%, 50% / 0.1);
+  }
+
+  .gameplay-btn-neon:hover {
+    border-color: hsl(35, 80%, 60% / 0.9);
+    box-shadow: 
+      0 0 25px hsl(35, 100%, 50% / 0.5),
+      0 0 50px hsl(35, 100%, 50% / 0.3),
+      inset 0 0 20px hsl(35, 100%, 50% / 0.2);
   }
 
   @keyframes bounce-slow {
