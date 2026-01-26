@@ -38,11 +38,11 @@ const MissionSection = () => {
       {/* Section Header */}
       <div className="text-center mb-16">
         <div className="flex items-center justify-center gap-4 mb-4">
-          <div className="h-px w-16 bg-muted-foreground/30" />
-          <span className="font-display text-sm tracking-[0.3em] text-muted-foreground">
+          <div className="h-px w-16 bg-swamp-cream/40" />
+          <span className="font-display text-sm tracking-[0.3em] text-swamp-cream/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
             OPERATION: EVERGLADES
           </span>
-          <div className="h-px w-16 bg-muted-foreground/30" />
+          <div className="h-px w-16 bg-swamp-cream/40" />
         </div>
         <h2 className="font-display text-5xl md:text-6xl tracking-wider text-swamp-cream">
           YOUR MISSION
