@@ -16,7 +16,12 @@ const HeroSection = () => {
 
       {/* Watch Gameplay Button - Positioned lower, below the airboat */}
       <div className="relative z-10 mt-auto mb-48">
-        <button className="gameplay-btn-neon group">
+        <button 
+          className="gameplay-btn-neon group"
+          onClick={() => {
+            document.getElementById('media')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           <span className="relative z-10 font-display text-lg tracking-wider text-swamp-cream">
             WATCH GAMEPLAY
           </span>
