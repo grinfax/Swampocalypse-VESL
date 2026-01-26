@@ -60,7 +60,7 @@ const WorldSection = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="world-image-caption">
-                <span className="font-display text-sm md:text-base tracking-wider gradient-orange-text italic">
+                <span className="font-display text-sm md:text-base tracking-wider text-white italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   {image.caption}
                 </span>
               </div>
