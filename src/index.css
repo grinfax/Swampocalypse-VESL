@@ -2,87 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 30 15% 8%;
+    --foreground: 40 20% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 30 20% 12%;
+    --card-foreground: 40 20% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 30 20% 12%;
+    --popover-foreground: 40 20% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 35 80% 55%;
+    --primary-foreground: 30 15% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 30 20% 18%;
+    --secondary-foreground: 40 20% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 30 15% 20%;
+    --muted-foreground: 40 10% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 80% 55%;
+    --accent-foreground: 30 15% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 20% 90%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 30 20% 25%;
+    --input: 30 20% 25%;
+    --ring: 35 80% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
+
+    /* Custom Swampocalypse colors */
+    --swamp-orange: 35 100% 50%;
+    --swamp-red: 0 70% 50%;
+    --swamp-green: 120 60% 45%;
+    --swamp-brown: 30 30% 15%;
+    --swamp-cream: 40 30% 85%;
+    
+    /* Gradients */
+    --gradient-orange: linear-gradient(180deg, hsl(40, 100%, 60%) 0%, hsl(30, 100%, 45%) 100%);
+    --gradient-red: linear-gradient(180deg, hsl(0, 80%, 55%) 0%, hsl(350, 70%, 40%) 100%);
+    --gradient-green: linear-gradient(180deg, hsl(120, 70%, 55%) 0%, hsl(140, 60%, 35%) 100%);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background: 30 15% 8%;
+    --foreground: 40 20% 90%;
+    --card: 30 20% 12%;
+    --card-foreground: 40 20% 90%;
+    --popover: 30 20% 12%;
+    --popover-foreground: 40 20% 90%;
+    --primary: 35 80% 55%;
+    --primary-foreground: 30 15% 8%;
+    --secondary: 30 20% 18%;
+    --secondary-foreground: 40 20% 90%;
+    --muted: 30 15% 20%;
+    --muted-foreground: 40 10% 60%;
+    --accent: 35 80% 55%;
+    --accent-foreground: 30 15% 8%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 20% 90%;
+    --border: 30 20% 25%;
+    --input: 30 20% 25%;
+    --ring: 35 80% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +95,120 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .text-swamp-orange {
+    color: hsl(var(--swamp-orange));
+  }
+
+  .text-swamp-red {
+    color: hsl(var(--swamp-red));
+  }
+
+  .text-swamp-green {
+    color: hsl(var(--swamp-green));
+  }
+
+  .text-swamp-cream {
+    color: hsl(var(--swamp-cream));
+  }
+
+  .bg-swamp-brown {
+    background-color: hsl(var(--swamp-brown));
+  }
+
+  .gradient-orange-text {
+    background: var(--gradient-orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-red-text {
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-green-text {
+    background: var(--gradient-green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .mission-card {
+    @apply relative bg-swamp-brown border border-border p-6 overflow-hidden;
+  }
+
+  .mission-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  .mission-card-orange::after {
+    background: linear-gradient(90deg, hsl(40, 100%, 60%) 0%, hsl(30, 100%, 45%) 50%, transparent 100%);
+  }
+
+  .mission-card-red::after {
+    background: linear-gradient(90deg, hsl(0, 80%, 55%) 0%, hsl(350, 70%, 40%) 50%, transparent 100%);
+  }
+
+  .mission-card-green::after {
+    background: linear-gradient(90deg, hsl(120, 70%, 55%) 0%, hsl(140, 60%, 35%) 50%, transparent 100%);
+  }
+
+  .gameplay-btn {
+    @apply relative px-8 py-3 bg-transparent border-2 border-foreground/50 text-foreground font-display text-lg tracking-wider flex items-center gap-3 transition-all duration-300;
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  }
+
+  .gameplay-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 6px, hsl(var(--foreground) / 0.1) 6px);
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+    transition: all 0.3s;
+  }
+
+  .gameplay-btn:hover::before {
+    background: linear-gradient(135deg, transparent 6px, hsl(var(--foreground) / 0.2) 6px);
+  }
+
+  .gameplay-btn span,
+  .gameplay-btn svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
   }
 }
