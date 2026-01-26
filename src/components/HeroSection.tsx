@@ -24,12 +24,12 @@ const HeroSection = () => {
         </button>
       </div>
 
-      {/* Scroll Down Indicator - Centered, minimal style */}
+      {/* Scroll Down Indicator - More visible with white text and drop shadow */}
       <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-1 animate-bounce-slow">
-        <span className="font-display text-xs tracking-[0.3em] text-swamp-cream/50 uppercase">
+        <span className="font-display text-sm tracking-[0.3em] text-white uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
           Scroll Down
         </span>
-        <ChevronDown className="w-5 h-5 text-swamp-cream/50" />
+        <ChevronDown className="w-6 h-6 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]" />
       </div>
     </section>
   );
