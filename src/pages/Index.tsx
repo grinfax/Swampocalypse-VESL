@@ -34,21 +34,20 @@ const Index = () => {
         {/* The World Section */}
         <WorldSection />
 
-        {/* Media + Footer with shared background */}
+        {/* Media Section with its own background */}
         <div className="relative overflow-hidden">
-          {/* Shared background image for Media and Footer */}
           <img
             src={mediaBg}
             alt=""
             className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           />
-          
-          {/* Content layered above background */}
           <div className="relative z-10">
             <MediaSection />
-            <FooterSection />
           </div>
         </div>
+
+        {/* Footer Section with its own background */}
+        <FooterSection />
       </div>
     </div>
   );
