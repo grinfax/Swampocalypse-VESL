@@ -10,7 +10,7 @@ const MissionSection = () => {
       subtitle: "BLAST THROUGH FLOODED MIAMI ON A HIGH-SPEED AIRBOAT.",
       description:
         "Race through flooded Miami and the shattered Everglades in a motion-simulated airboat. Feel every turn, hit, and surge of speed as you navigate collapsing structures, narrow swamp channels, and toxic waters.",
-      colorClass: "mission-card-orange",
+      colorClass: "mission-card-glass mission-card-orange",
       titleClass: "gradient-orange-text",
     },
     {
@@ -19,7 +19,7 @@ const MissionSection = () => {
       subtitle: "BATTLE INFECTED ZOMBIES, BORN FROM TOXIC COLLAPSE.",
       description:
         "Fight off pollution-spawned zombies and mutated wildlife that roam the ruins. Survival depends on quick reactions, awareness of your surroundings, and knowing when to push forward or escape.",
-      colorClass: "mission-card-red",
+      colorClass: "mission-card-glass mission-card-red",
       titleClass: "gradient-red-text",
     },
     {
@@ -28,13 +28,13 @@ const MissionSection = () => {
       subtitle: "DEPLOY SEED PODS TO RESHAPE THE BATTLEFIELD.",
       description:
         "Fire seed pods across poisoned land and watch the environment respond in real time. As toxic zones fade and life begins to return, restoration becomes your most powerful tool.",
-      colorClass: "mission-card-green",
+      colorClass: "mission-card-glass mission-card-green",
       titleClass: "gradient-green-text",
     },
   ];
 
   return (
-    <section id="mission" className="relative py-24 px-4 bg-background">
+    <section id="mission" className="relative py-24 px-4">
       {/* Section Header */}
       <div className="text-center mb-16">
         <div className="flex items-center justify-center gap-4 mb-4">
@@ -52,7 +52,7 @@ const MissionSection = () => {
       {/* Mission Cards */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {missions.map((mission, index) => (
-          <div key={index} className={`mission-card ${mission.colorClass}`}>
+          <div key={index} className={`${mission.colorClass} group`}>
             {/* Icon */}
             <div className="w-16 h-16 mb-6 flex items-center justify-center bg-secondary/50 border border-border">
               <img
@@ -64,7 +64,7 @@ const MissionSection = () => {
 
             {/* Title */}
             <h3
-              className={`font-display text-2xl tracking-wider mb-3 ${mission.titleClass}`}
+              className={`font-display text-2xl tracking-wider mb-3 italic ${mission.titleClass}`}
             >
               {mission.title}
             </h3>
