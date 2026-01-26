@@ -1,5 +1,5 @@
 import missionFootage from "@/assets/mission-footage.mp4";
-import { Play, Pause, Volume2, VolumeX, Maximize, Minimize } from "lucide-react";
+import { Play, Pause, Volume2, VolumeX, Maximize, Minimize, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 const VideoPlayer = () => {
@@ -238,6 +238,20 @@ const YouTubeEmbed = () => {
 };
 
 const MediaSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const videos = [
+    { type: 'local' as const },
+    { type: 'youtube' as const }
+  ];
+
+  const goToPrevious = () => {
+    setActiveIndex((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setActiveIndex((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <section id="media" className="relative py-24 px-4">
       {/* Content */}
@@ -256,10 +270,43 @@ const MediaSection = () => {
           </div>
         </div>
 
-        {/* Video Gallery */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <VideoPlayer />
-          <YouTubeEmbed />
+        {/* Video Carousel */}
+        <div className="flex items-center justify-center gap-4 md:gap-8">
+          {/* Left Arrow */}
+          <button
+            onClick={goToPrevious}
+            className="flex-shrink-0 w-12 h-12 rounded-full bg-black/50 border-2 border-primary/50 flex items-center justify-center text-swamp-cream hover:bg-primary/20 hover:border-primary transition-all duration-300 shadow-[0_0_15px_hsl(35,100%,50%,0.2)] hover:shadow-[0_0_20px_hsl(35,100%,50%,0.4)]"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          {/* Video Container */}
+          <div className="max-w-3xl w-full">
+            {activeIndex === 0 ? <VideoPlayer /> : <YouTubeEmbed />}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={goToNext}
+            className="flex-shrink-0 w-12 h-12 rounded-full bg-black/50 border-2 border-primary/50 flex items-center justify-center text-swamp-cream hover:bg-primary/20 hover:border-primary transition-all duration-300 shadow-[0_0_15px_hsl(35,100%,50%,0.2)] hover:shadow-[0_0_20px_hsl(35,100%,50%,0.4)]"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center gap-3 mt-6">
+          {videos.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                activeIndex === index
+                  ? 'bg-primary shadow-[0_0_10px_hsl(35,100%,50%,0.8)]'
+                  : 'bg-swamp-cream/30 hover:bg-swamp-cream/50'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
