@@ -1,20 +1,9 @@
 import { ChevronDown, Play } from "lucide-react";
 import titleImage from "@/assets/swampocalypse-title.png";
-import unifiedBg from "@/assets/unified-bg.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background Image as actual img element */}
-      <img
-        src={unifiedBg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover object-center"
-        style={{ backgroundAttachment: 'scroll' }}
-      />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60 pointer-events-none" />
-
+    <section className="relative min-h-screen flex flex-col items-center justify-center">
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 pt-20">
         {/* Title Image (includes "COMING SOON" and tagline) */}
