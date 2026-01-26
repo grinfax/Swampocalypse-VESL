@@ -58,7 +58,7 @@ const MissionSection = () => {
               <img
                 src={mission.icon}
                 alt={mission.title}
-                className="w-8 h-8 object-contain"
+                className="w-[50px] h-[50px] object-contain"
               />
             </div>
 
