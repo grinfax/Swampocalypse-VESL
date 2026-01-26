@@ -152,7 +152,7 @@
 
   /* Glassmorphic Mission Card */
   .mission-card-glass {
-    @apply relative p-6 overflow-hidden;
+    @apply relative p-6 overflow-hidden transition-all duration-300;
     background: hsla(var(--background) / 0.3);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -191,7 +191,11 @@
     background: linear-gradient(180deg, hsl(35, 100%, 50% / 0.3) 0%, transparent 100%);
   }
   .mission-card-orange:hover {
-    box-shadow: 0 0 30px hsl(35, 100%, 50% / 0.4), 0 0 60px hsl(35, 100%, 50% / 0.2);
+    border-color: hsl(35, 100%, 50%);
+    box-shadow: 
+      0 0 15px hsl(35, 100%, 50% / 0.6), 
+      0 0 30px hsl(35, 100%, 50% / 0.3),
+      inset 0 0 20px hsl(35, 100%, 50% / 0.1);
   }
   .mission-card-orange:hover::before {
     box-shadow: 0 0 30px hsl(35, 100%, 50% / 0.8), 0 0 60px hsl(35, 100%, 50% / 0.4);
@@ -210,7 +214,11 @@
     background: linear-gradient(180deg, hsl(0, 80%, 50% / 0.3) 0%, transparent 100%);
   }
   .mission-card-red:hover {
-    box-shadow: 0 0 30px hsl(0, 80%, 50% / 0.4), 0 0 60px hsl(0, 80%, 50% / 0.2);
+    border-color: hsl(0, 80%, 50%);
+    box-shadow: 
+      0 0 15px hsl(0, 80%, 50% / 0.6), 
+      0 0 30px hsl(0, 80%, 50% / 0.3),
+      inset 0 0 20px hsl(0, 80%, 50% / 0.1);
   }
   .mission-card-red:hover::before {
     box-shadow: 0 0 30px hsl(0, 80%, 50% / 0.8), 0 0 60px hsl(0, 80%, 50% / 0.4);
@@ -229,7 +237,11 @@
     background: linear-gradient(180deg, hsl(120, 70%, 50% / 0.3) 0%, transparent 100%);
   }
   .mission-card-green:hover {
-    box-shadow: 0 0 30px hsl(120, 70%, 50% / 0.4), 0 0 60px hsl(120, 70%, 50% / 0.2);
+    border-color: hsl(120, 70%, 50%);
+    box-shadow: 
+      0 0 15px hsl(120, 70%, 50% / 0.6), 
+      0 0 30px hsl(120, 70%, 50% / 0.3),
+      inset 0 0 20px hsl(120, 70%, 50% / 0.1);
   }
   .mission-card-green:hover::before {
     box-shadow: 0 0 30px hsl(120, 70%, 50% / 0.8), 0 0 60px hsl(120, 70%, 50% / 0.4);
