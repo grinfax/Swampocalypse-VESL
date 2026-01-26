@@ -24,15 +24,15 @@ const MediaSection = () => {
         {/* Video Player with Frame */}
         <div className="flex justify-center">
           <div className="relative max-w-3xl w-full">
-            {/* Video Overlay Frame */}
+            {/* Video Overlay Frame - this is the main sizing element */}
             <img
               src={videoOverlay}
               alt=""
-              className="absolute inset-0 w-full h-full object-contain pointer-events-none z-20"
+              className="relative w-full h-auto pointer-events-none z-20"
             />
             
-            {/* Video Thumbnail Container */}
-            <div className="relative aspect-[16/9] mx-[6%] my-[4%]">
+            {/* Video Thumbnail Container - positioned inside the frame */}
+            <div className="absolute inset-0 z-10" style={{ top: '6.5%', left: '5.5%', right: '5.5%', bottom: '16%' }}>
               <img
                 src={videoThumbnail}
                 alt="Mission Footage"

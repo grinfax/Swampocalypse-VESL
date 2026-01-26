@@ -78,7 +78,7 @@ const FooterSection = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/thevesl/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-swamp-cream/70 hover:text-swamp-cream transition-colors"
@@ -86,7 +86,7 @@ const FooterSection = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/umvesl"
               target="_blank"
               rel="noopener noreferrer"
               className="text-swamp-cream/70 hover:text-swamp-cream transition-colors"
