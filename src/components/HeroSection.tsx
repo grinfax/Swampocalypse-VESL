@@ -10,7 +10,7 @@ const HeroSection = () => {
         <img
           src={titleImage}
           alt="SWAMPOCALYPSE - Coming Soon - Gritty, Wild, and Unapologetically Hopeful"
-          className="w-full max-w-4xl h-auto"
+          className="w-full max-w-4xl h-auto mt-7"
         />
       </div>
 
