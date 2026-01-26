@@ -7,7 +7,7 @@ const FooterSection = () => {
   const navLinks = [
     { label: "YOUR MISSION", href: "#mission" },
     { label: "THE WORLD", href: "#world" },
-    { label: "MEDIA", href: "#media" },
+    { label: "GAMEPLAY", href: "#media" },
   ];
 
   return (
