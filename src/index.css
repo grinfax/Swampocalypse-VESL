@@ -190,6 +190,9 @@
   .mission-card-orange::after {
     background: linear-gradient(180deg, hsl(35, 100%, 50% / 0.3) 0%, transparent 100%);
   }
+  .mission-card-orange:hover {
+    box-shadow: 0 0 30px hsl(35, 100%, 50% / 0.4), 0 0 60px hsl(35, 100%, 50% / 0.2);
+  }
   .mission-card-orange:hover::before {
     box-shadow: 0 0 30px hsl(35, 100%, 50% / 0.8), 0 0 60px hsl(35, 100%, 50% / 0.4);
   }
@@ -205,6 +208,9 @@
   }
   .mission-card-red::after {
     background: linear-gradient(180deg, hsl(0, 80%, 50% / 0.3) 0%, transparent 100%);
+  }
+  .mission-card-red:hover {
+    box-shadow: 0 0 30px hsl(0, 80%, 50% / 0.4), 0 0 60px hsl(0, 80%, 50% / 0.2);
   }
   .mission-card-red:hover::before {
     box-shadow: 0 0 30px hsl(0, 80%, 50% / 0.8), 0 0 60px hsl(0, 80%, 50% / 0.4);
@@ -222,6 +228,9 @@
   .mission-card-green::after {
     background: linear-gradient(180deg, hsl(120, 70%, 50% / 0.3) 0%, transparent 100%);
   }
+  .mission-card-green:hover {
+    box-shadow: 0 0 30px hsl(120, 70%, 50% / 0.4), 0 0 60px hsl(120, 70%, 50% / 0.2);
+  }
   .mission-card-green:hover::before {
     box-shadow: 0 0 30px hsl(120, 70%, 50% / 0.8), 0 0 60px hsl(120, 70%, 50% / 0.4);
   }
@@ -230,25 +239,27 @@
     height: 100px;
   }
 
-  /* Neon Gameplay Button - Glowy orange/brown border */
+  /* Neon Gameplay Button - Intense glowy orange/brown border */
   .gameplay-btn-neon {
     @apply relative px-12 py-4 flex items-center gap-3 transition-all duration-300 cursor-pointer;
     background: hsla(30, 20%, 12%, 0.6);
-    border: 2px solid hsl(30, 70%, 50%);
+    border: 2px solid hsl(32, 85%, 55%);
     border-radius: 10px;
     box-shadow: 
-      0 0 15px hsl(30, 80%, 45% / 0.5),
-      0 0 30px hsl(30, 70%, 40% / 0.3),
-      inset 0 0 20px hsl(30, 80%, 50% / 0.1);
+      0 0 10px hsl(32, 90%, 50% / 0.8),
+      0 0 25px hsl(30, 85%, 45% / 0.6),
+      0 0 45px hsl(30, 80%, 40% / 0.4),
+      inset 0 0 15px hsl(30, 80%, 50% / 0.15);
   }
 
   .gameplay-btn-neon:hover {
-    border-color: hsl(32, 80%, 55%);
+    border-color: hsl(35, 90%, 60%);
     background: hsla(30, 25%, 15%, 0.7);
     box-shadow: 
-      0 0 25px hsl(30, 85%, 50% / 0.7),
-      0 0 50px hsl(30, 80%, 45% / 0.4),
-      inset 0 0 25px hsl(30, 80%, 50% / 0.15);
+      0 0 15px hsl(35, 95%, 55% / 1),
+      0 0 35px hsl(32, 90%, 50% / 0.8),
+      0 0 60px hsl(30, 85%, 45% / 0.5),
+      inset 0 0 20px hsl(30, 80%, 50% / 0.2);
   }
 
   @keyframes bounce-slow {
