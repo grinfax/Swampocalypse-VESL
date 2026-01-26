@@ -32,7 +32,7 @@ const MediaSection = () => {
             />
             
             {/* Video Thumbnail Container - positioned inside the frame */}
-            <div className="absolute inset-0 z-10" style={{ top: '6.5%', left: '5.5%', right: '5.5%', bottom: '16%' }}>
+            <div className="absolute inset-0 z-10" style={{ top: '8%', left: '6%', right: '6%', bottom: '18%' }}>
               <img
                 src={videoThumbnail}
                 alt="Mission Footage"
