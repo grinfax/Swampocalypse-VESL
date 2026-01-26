@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import MissionSection from "@/components/MissionSection";
+import WorldSection from "@/components/WorldSection";
 import fullBg from "@/assets/full-bg.png";
 
 const Index = () => {
@@ -26,6 +27,9 @@ const Index = () => {
             <MissionSection />
           </div>
         </div>
+
+        {/* The World Section */}
+        <WorldSection />
       </div>
     </div>
   );

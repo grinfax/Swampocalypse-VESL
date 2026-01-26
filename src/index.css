@@ -286,4 +286,27 @@
   .animate-bounce-slow {
     animation: bounce-slow 2s ease-in-out infinite;
   }
+
+  /* World Image Card with Orange Neon Border */
+  .world-image-card {
+    @apply relative overflow-hidden transition-all duration-300;
+    border: 2px solid hsla(35, 100%, 50% / 0.6);
+    box-shadow: 
+      0 0 10px hsl(35, 100%, 50% / 0.4),
+      0 0 20px hsl(35, 100%, 50% / 0.2);
+  }
+
+  .world-image-card:hover {
+    border-color: hsl(35, 100%, 50%);
+    box-shadow: 
+      0 0 15px hsl(35, 100%, 50% / 0.8),
+      0 0 30px hsl(35, 100%, 50% / 0.5),
+      0 0 45px hsl(35, 100%, 50% / 0.3),
+      inset 0 0 20px hsl(35, 100%, 50% / 0.1);
+  }
+
+  .world-image-caption {
+    @apply absolute bottom-0 left-0 right-0 py-3 px-4 text-center;
+    background: linear-gradient(180deg, transparent 0%, hsla(0, 0%, 0%, 0.8) 100%);
+  }
 }
