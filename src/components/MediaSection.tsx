@@ -1,8 +1,23 @@
-import videoThumbnail from "@/assets/video-thumbnail.png";
+import missionFootage from "@/assets/mission-footage.mp4";
 import videoOverlay from "@/assets/video-overlay.png";
 import { Play } from "lucide-react";
+import { useState, useRef } from "react";
 
 const MediaSection = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <section id="media" className="relative py-24 px-4">
       {/* Content */}
@@ -31,17 +46,25 @@ const MediaSection = () => {
               className="relative w-full h-auto pointer-events-none z-20"
             />
             
-            {/* Video Thumbnail Container - positioned inside the frame */}
+            {/* Video Container - positioned inside the frame */}
             <div className="absolute inset-0 z-10" style={{ top: '8%', left: '6%', right: '6%', bottom: '18%' }}>
-              <img
-                src={videoThumbnail}
-                alt="Mission Footage"
+              <video
+                ref={videoRef}
+                src={missionFootage}
                 className="w-full h-full object-cover"
+                loop
+                muted
+                playsInline
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
               />
               
               {/* Play Button Overlay */}
-              <button className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors group cursor-pointer">
-                <div className="w-16 h-16 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-black/80 transition-colors">
+              <button 
+                onClick={handlePlayClick}
+                className={`absolute inset-0 flex items-center justify-center transition-colors group cursor-pointer ${isPlaying ? 'bg-transparent hover:bg-black/20' : 'bg-black/30 hover:bg-black/40'}`}
+              >
+                <div className={`w-16 h-16 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-black/80 transition-all ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
                   <Play className="w-8 h-8 text-white fill-white ml-1" />
                 </div>
               </button>
