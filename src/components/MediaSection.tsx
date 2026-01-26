@@ -1,5 +1,4 @@
 import missionFootage from "@/assets/mission-footage.mp4";
-import videoOverlay from "@/assets/video-overlay.png";
 import { Play } from "lucide-react";
 import { useState, useRef } from "react";
 
@@ -36,39 +35,29 @@ const MediaSection = () => {
           </div>
         </div>
 
-        {/* Video Player with Frame */}
+        {/* Video Player */}
         <div className="flex justify-center">
-          <div className="relative max-w-3xl w-full group/video">
-            {/* Video Overlay Frame - this is the main sizing element */}
-            <img
-              src={videoOverlay}
-              alt=""
-              className="relative w-full h-auto pointer-events-none z-20 transition-all duration-300 group-hover/video:drop-shadow-[0_0_20px_hsl(35,100%,50%,0.6)]"
+          <div className="relative max-w-3xl w-full group/video rounded-xl overflow-hidden border-2 border-primary/50 shadow-[0_0_20px_hsl(35,100%,50%,0.3)] hover:shadow-[0_0_30px_hsl(35,100%,50%,0.5)] transition-all duration-300">
+            <video
+              ref={videoRef}
+              src={missionFootage}
+              className="w-full h-auto"
+              loop
+              muted
+              playsInline
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
             />
             
-            {/* Video Container - positioned inside the frame */}
-            <div className="absolute inset-0 z-10 rounded-lg overflow-hidden" style={{ top: '6%', left: '5%', right: '5%', bottom: '6%' }}>
-              <video
-                ref={videoRef}
-                src={missionFootage}
-                className="w-full h-full object-cover"
-                loop
-                muted
-                playsInline
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
-              />
-              
-              {/* Play Button Overlay */}
-              <button 
-                onClick={handlePlayClick}
-                className={`absolute inset-0 flex items-center justify-center transition-colors group cursor-pointer ${isPlaying ? 'bg-transparent hover:bg-black/20' : 'bg-black/30 hover:bg-black/40'}`}
-              >
-                <div className={`w-16 h-16 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-black/80 transition-all ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
-                  <Play className="w-8 h-8 text-white fill-white ml-1" />
-                </div>
-              </button>
-            </div>
+            {/* Play Button Overlay */}
+            <button 
+              onClick={handlePlayClick}
+              className={`absolute inset-0 flex items-center justify-center transition-colors group cursor-pointer ${isPlaying ? 'bg-transparent hover:bg-black/20' : 'bg-black/30 hover:bg-black/40'}`}
+            >
+              <div className={`w-16 h-16 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-black/80 transition-all ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
+                <Play className="w-8 h-8 text-white fill-white ml-1" />
+              </div>
+            </button>
           </div>
         </div>
       </div>
