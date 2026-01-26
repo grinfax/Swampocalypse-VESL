@@ -1,6 +1,7 @@
 import hazardIcon from "@/assets/hazard-icon.png";
 import gunIcon from "@/assets/gun-icon.png";
 import plantIcon from "@/assets/plant-icon.png";
+import unifiedBg from "@/assets/unified-bg.png";
 
 const MissionSection = () => {
   const missions = [
@@ -34,52 +35,64 @@ const MissionSection = () => {
   ];
 
   return (
-    <section id="mission" className="relative py-24 px-4">
-      {/* Section Header */}
-      <div className="text-center mb-16">
-        <div className="flex items-center justify-center gap-4 mb-4">
-          <div className="h-px w-16 bg-muted-foreground/30" />
-          <span className="font-display text-sm tracking-[0.3em] text-muted-foreground">
-            OPERATION: EVERGLADES
-          </span>
-          <div className="h-px w-16 bg-muted-foreground/30" />
-        </div>
-        <h2 className="font-display text-5xl md:text-6xl tracking-wider text-swamp-cream">
-          YOUR MISSION
-        </h2>
-      </div>
+    <section id="mission" className="relative py-24 px-4 overflow-hidden">
+      {/* Background Image as actual img element */}
+      <img
+        src={unifiedBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover object-top"
+      />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-background/70 pointer-events-none" />
 
-      {/* Mission Cards */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-        {missions.map((mission, index) => (
-          <div key={index} className={`${mission.colorClass} group`}>
-            {/* Icon */}
-            <div className="w-16 h-16 mb-6 flex items-center justify-center bg-secondary/50 border border-border">
-              <img
-                src={mission.icon}
-                alt={mission.title}
-                className="w-10 h-10 object-contain"
-              />
-            </div>
-
-            {/* Title */}
-            <h3
-              className={`font-display text-2xl tracking-wider mb-3 italic ${mission.titleClass}`}
-            >
-              {mission.title}
-            </h3>
-
-            {/* Subtitle */}
-            <p className="font-sans text-sm font-bold text-swamp-cream mb-4 leading-relaxed">
-              {mission.subtitle}
-            </p>
-
-            {/* Description */}
-            <p className="font-sans text-sm text-muted-foreground leading-relaxed">
-              {mission.description}
-            </p>
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="h-px w-16 bg-muted-foreground/30" />
+            <span className="font-display text-sm tracking-[0.3em] text-muted-foreground">
+              OPERATION: EVERGLADES
+            </span>
+            <div className="h-px w-16 bg-muted-foreground/30" />
           </div>
-        ))}
+          <h2 className="font-display text-5xl md:text-6xl tracking-wider text-swamp-cream">
+            YOUR MISSION
+          </h2>
+        </div>
+
+        {/* Mission Cards */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          {missions.map((mission, index) => (
+            <div key={index} className={`${mission.colorClass} group`}>
+              {/* Icon */}
+              <div className="w-16 h-16 mb-6 flex items-center justify-center bg-secondary/50 border border-border">
+                <img
+                  src={mission.icon}
+                  alt={mission.title}
+                  className="w-10 h-10 object-contain"
+                />
+              </div>
+
+              {/* Title */}
+              <h3
+                className={`font-display text-2xl tracking-wider mb-3 italic ${mission.titleClass}`}
+              >
+                {mission.title}
+              </h3>
+
+              {/* Subtitle */}
+              <p className="font-sans text-sm font-bold text-swamp-cream mb-4 leading-relaxed">
+                {mission.subtitle}
+              </p>
+
+              {/* Description */}
+              <p className="font-sans text-sm text-muted-foreground leading-relaxed">
+                {mission.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
