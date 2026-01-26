@@ -1,7 +1,7 @@
 import hazardIcon from "@/assets/hazard-icon.png";
 import gunIcon from "@/assets/gun-icon.png";
 import plantIcon from "@/assets/plant-icon.png";
-import missionBg from "@/assets/mission-bg.png";
+
 const MissionSection = () => {
   const missions = [
     {
@@ -35,15 +35,8 @@ const MissionSection = () => {
 
   return (
     <section id="mission" className="relative py-24 px-4">
-      {/* Background */}
-      <img
-        src={missionBg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        style={{ maxWidth: '1440px', left: '50%', transform: 'translateX(-50%)' }}
-      />
       {/* Section Header */}
-      <div className="relative z-10 text-center mb-16">
+      <div className="text-center mb-16">
         <div className="flex items-center justify-center gap-4 mb-4">
           <div className="h-px w-16 bg-swamp-cream/40" />
           <span className="font-display text-sm tracking-[0.3em] text-swamp-cream/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
@@ -57,7 +50,7 @@ const MissionSection = () => {
       </div>
 
       {/* Mission Cards */}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {missions.map((mission, index) => (
           <div key={index} className={`${mission.colorClass} group`}>
             {/* Icon */}
