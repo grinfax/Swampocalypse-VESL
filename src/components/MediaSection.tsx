@@ -47,7 +47,7 @@ const MediaSection = () => {
             />
             
             {/* Video Container - positioned inside the frame */}
-            <div className="absolute inset-0 z-10" style={{ top: '10%', left: '8%', right: '8%', bottom: '10%' }}>
+            <div className="absolute inset-0 z-10 rounded-lg overflow-hidden" style={{ top: '6%', left: '5%', right: '5%', bottom: '6%' }}>
               <video
                 ref={videoRef}
                 src={missionFootage}
