@@ -69,6 +69,10 @@ const FooterSection = () => {
             <a
               key={link.label}
               href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(link.href.slice(1))?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="font-display text-sm tracking-wider text-swamp-cream/70 hover:text-swamp-cream transition-colors"
             >
               {link.label}

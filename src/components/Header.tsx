@@ -7,18 +7,30 @@ const Header = () => {
           <div className="flex items-center gap-12">
             <a
               href="#mission"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('mission')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="font-display text-sm tracking-[0.2em] text-swamp-cream/80 hover:text-swamp-cream transition-colors"
             >
               YOUR MISSION
             </a>
             <a
               href="#world"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('world')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="font-display text-sm tracking-[0.2em] text-swamp-cream/80 hover:text-swamp-cream transition-colors"
             >
               THE WORLD
             </a>
             <a
               href="#media"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('media')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="font-display text-sm tracking-[0.2em] text-swamp-cream/80 hover:text-swamp-cream transition-colors"
             >
               MEDIA
