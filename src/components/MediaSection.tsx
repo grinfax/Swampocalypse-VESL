@@ -38,16 +38,16 @@ const MediaSection = () => {
 
         {/* Video Player with Frame */}
         <div className="flex justify-center">
-          <div className="relative max-w-3xl w-full">
+          <div className="relative max-w-3xl w-full group/video">
             {/* Video Overlay Frame - this is the main sizing element */}
             <img
               src={videoOverlay}
               alt=""
-              className="relative w-full h-auto pointer-events-none z-20"
+              className="relative w-full h-auto pointer-events-none z-20 transition-all duration-300 group-hover/video:drop-shadow-[0_0_20px_hsl(35,100%,50%,0.6)]"
             />
             
             {/* Video Container - positioned inside the frame */}
-            <div className="absolute inset-0 z-10" style={{ top: '8%', left: '6%', right: '6%', bottom: '18%' }}>
+            <div className="absolute inset-0 z-10" style={{ top: '10%', left: '8%', right: '8%', bottom: '10%' }}>
               <video
                 ref={videoRef}
                 src={missionFootage}
