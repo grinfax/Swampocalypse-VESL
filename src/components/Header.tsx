@@ -33,7 +33,7 @@ const Header = () => {
               }}
               className="font-display text-sm tracking-[0.2em] text-swamp-cream/80 hover:text-swamp-cream transition-colors"
             >
-              MEDIA
+              GAMEPLAY
             </a>
           </div>
         </nav>
