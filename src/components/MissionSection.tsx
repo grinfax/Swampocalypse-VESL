@@ -54,11 +54,11 @@ const MissionSection = () => {
         {missions.map((mission, index) => (
           <div key={index} className={`${mission.colorClass} group`}>
             {/* Icon */}
-            <div className="w-[50px] h-[50px] mb-6 flex items-center justify-center">
+            <div className="w-16 h-16 mb-6 flex items-center justify-center bg-secondary/50 border border-border">
               <img
                 src={mission.icon}
                 alt={mission.title}
-                className="w-full h-full object-contain"
+                className="w-8 h-8 object-contain"
               />
             </div>
 
