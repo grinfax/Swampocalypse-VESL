@@ -1,6 +1,6 @@
 import veslLogo from "@/assets/vesl-logo.png";
 import footerBg from "@/assets/footer-bg.png";
-import miniSwampocalypse from "@/assets/mini-swampocalypse.png";
+import swampocalypseLogo from "@/assets/swampocalypse-logo.png";
 import { Linkedin } from "lucide-react";
 
 const FooterSection = () => {
@@ -26,12 +26,12 @@ const FooterSection = () => {
           {/* Title Image */}
           <div className="flex justify-center mb-2">
             <img
-              src={miniSwampocalypse}
+              src={swampocalypseLogo}
               alt="Swampocalypse"
-              className="h-8 md:h-10 object-contain"
+              className="h-10 md:h-14 object-contain"
             />
           </div>
-          <p className="font-display text-sm tracking-[0.3em] text-swamp-cream/80 mb-8">
+          <p className="font-display text-sm tracking-[0.3em] text-[#F2E6D8]/80 mb-8">
             COMING SOON TO STEAM
           </p>
 

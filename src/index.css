@@ -251,10 +251,10 @@
     height: 100px;
   }
 
-  /* Neon Gameplay Button - Intense glowy orange/brown border */
+  /* Neon Gameplay Button - Solid black background with glowy orange/brown border */
   .gameplay-btn-neon {
     @apply relative px-12 py-4 flex items-center gap-3 transition-all duration-300 cursor-pointer;
-    background: hsla(30, 20%, 12%, 0.6);
+    background: hsl(0, 0%, 0%);
     border: 2px solid hsl(32, 85%, 55%);
     border-radius: 10px;
     box-shadow: 
@@ -266,7 +266,7 @@
 
   .gameplay-btn-neon:hover {
     border-color: hsl(35, 90%, 60%);
-    background: hsla(30, 25%, 15%, 0.7);
+    background: hsl(0, 0%, 5%);
     box-shadow: 
       0 0 15px hsl(35, 95%, 55% / 1),
       0 0 35px hsl(32, 90%, 50% / 0.8),
