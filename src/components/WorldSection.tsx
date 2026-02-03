@@ -73,7 +73,7 @@ const WorldSection = () => {
           <img
             src={fieldLog}
             alt="Field Log - South Florida"
-            className="max-w-4xl w-full drop-shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
+            className="max-w-5xl w-full drop-shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
           />
         </div>
       </div>
