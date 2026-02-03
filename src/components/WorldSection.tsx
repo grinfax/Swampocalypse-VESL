@@ -9,15 +9,15 @@ const WorldSection = () => {
   const worldImages = [
     {
       src: worldZombie,
-      caption: "NOT EVERYTHING THAT SURVIVED IS HUMAN",
+      caption: "YOUR PET IGUANAS MUTATED",
     },
     {
       src: worldGator,
-      caption: "PREDATORS RULE THE FLOODED RUINS",
+      caption: "PROTECT THE NATIVE SPECIES",
     },
     {
       src: worldContamination,
-      caption: "NOTHING HERE IS UNCONTAMINATED",
+      caption: "SHUT OFF PHOSPHORUS RUNOFF",
     },
     {
       src: worldRestoration,
