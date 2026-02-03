@@ -35,6 +35,74 @@ const FooterSection = () => {
             COMING SOON TO STEAM
           </p>
 
+          {/* Our Team Section */}
+          <div className="mb-12">
+            {/* Section Header */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-px w-24 bg-swamp-cream/40" />
+              <span className="font-display text-xl tracking-[0.2em] text-swamp-cream">
+                OUR TEAM
+              </span>
+              <div className="h-px w-24 bg-swamp-cream/40" />
+            </div>
+
+            {/* Team Credits Grid - Row 1 */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-6">
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Executive Producer</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Kim Grinfeder</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Lead Engineer</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Jared De Monteiro</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">UI Designer</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Sidney Cocimano</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Producer</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Mia Uy</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Audio Engineer</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Dan Zahal</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">3D Artist</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Jane Yao</p>
+              </div>
+            </div>
+
+            {/* Team Credits Grid - Row 2 */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Technical Lead</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Bryson Rudolph</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Creative Director</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Christine Jung</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Prototyper</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Eva Ellis</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Prototyper</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Paulina Fiore</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Video Producer</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Filipe Barbosa</p>
+              </div>
+              <div className="text-center">
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Website Designer</p>
+                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Nasir Grant</p>
+              </div>
+            </div>
+          </div>
+
           {/* Quote */}
           <blockquote className="text-swamp-cream/90 italic text-lg md:text-xl leading-relaxed mb-8">
             <p>"THE WORLD IS ALREADY BROKEN.</p>
