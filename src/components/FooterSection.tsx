@@ -1,6 +1,6 @@
 import veslLogo from "@/assets/vesl-logo.png";
 import footerBg from "@/assets/footer-bg.png";
-import swampocalypseLogo from "@/assets/swampocalypse-logo.png";
+import swampocalypseLogo from "@/assets/swampocalypse-footer-logo.png";
 import { Linkedin } from "lucide-react";
 
 const FooterSection = () => {
