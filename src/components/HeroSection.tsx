@@ -17,9 +17,6 @@ const HeroSection = () => {
           className="w-full max-w-4xl h-auto"
         />
         {/* Tagline */}
-        <p className="font-display text-sm md:text-base tracking-[0.3em] text-[#F2E6D8] mt-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
-          GRITTY, WILD, AND UNAPOLOGETICALLY HOPEFUL
-        </p>
       </div>
 
       {/* Watch Gameplay Button - Positioned lower, below the airboat */}
