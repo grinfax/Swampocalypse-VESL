@@ -4,30 +4,14 @@ import swampocalypseLogo from "@/assets/swampocalypse-logo.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center">
-      {/* Content container with fixed positioning for text */}
+      {/* Content - Logo with taglines */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 pt-12 mt-[86px]">
-        {/* Logo positioned absolutely so shadow doesn't affect text spacing */}
-        <div className="relative w-full max-w-4xl">
-          {/* Coming Soon Text - positioned above logo visual area */}
-          <p className="font-display text-lg md:text-xl tracking-[0.4em] text-[#F2E6D8] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] text-center">
-            COMING SOON
-          </p>
-          
-          {/* Logo container - uses padding-bottom for aspect ratio, logo positioned inside */}
-          <div className="relative" style={{ paddingBottom: '18%' }}>
-            <img
-              src={swampocalypseLogo}
-              alt="SWAMPOCALYPSE"
-              className="absolute left-1/2 -translate-x-1/2 w-full max-w-4xl h-auto"
-              style={{ top: '-15%' }}
-            />
-          </div>
-          
-          {/* Tagline - positioned relative to visual logo area, not image bounds */}
-          <p className="font-display text-sm md:text-base tracking-[0.3em] text-[#F2E6D8] drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] text-center" style={{ marginTop: '-2%' }}>
-            GRITTY, WILD, AND UNAPOLOGETICALLY HOPEFUL
-          </p>
-        </div>
+        {/* Combined Logo + Taglines Image */}
+        <img
+          src={swampocalypseLogo}
+          alt="SWAMPOCALYPSE - Coming Soon - Gritty, Wild, and Unapologetically Hopeful"
+          className="w-full max-w-4xl h-auto"
+        />
       </div>
 
       {/* Watch Gameplay Button - Positioned lower, below the airboat */}
