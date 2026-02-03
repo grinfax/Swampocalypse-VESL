@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Content - Title positioned higher */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 pt-12 mt-[86px]">
         {/* Coming Soon Text */}
-        <p className="font-display text-lg md:text-xl tracking-[0.4em] text-[#F2E6D8] mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+        <p className="font-display text-lg md:text-xl tracking-[0.4em] text-[#F2E6D8] mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
           COMING SOON
         </p>
         {/* Title Image */}
@@ -17,7 +17,7 @@ const HeroSection = () => {
           className="w-full max-w-4xl h-auto"
         />
         {/* Tagline */}
-        <p className="font-display text-sm md:text-base tracking-[0.3em] text-[#F2E6D8] mt-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+        <p className="font-display text-sm md:text-base tracking-[0.3em] text-[#F2E6D8] mt-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
           GRITTY, WILD, AND UNAPOLOGETICALLY HOPEFUL
         </p>
       </div>
