@@ -1,5 +1,6 @@
 import veslLogo from "@/assets/vesl-logo.png";
 import footerBg from "@/assets/footer-bg.png";
+import LinkedInSm from "@/assets/LinkedIn_logo.png";
 import swampocalypseLogo from "@/assets/swampocalypse-footer-logo.png";
 import { Linkedin } from "lucide-react";
 
@@ -48,59 +49,201 @@ const FooterSection = () => {
 
             {/* Team Credits Grid - Row 1 */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-6">
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Executive Producer</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Kim Grinfeder</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Lead Engineer</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Jared De Monteiro</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">UI Designer</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Sidney Cocimano</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Producer</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Mia Uy</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Audio Engineer</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Dan Zahal</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">3D Artist</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Jane Yao</p>
-              </div>
-            </div>
+  {/* Lead Engineer */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Lead Engineer</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/jareddemonteiro/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Jared De Monteiro 
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
 
-            {/* Team Credits Grid - Row 2 */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Technical Lead</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Bryson Rudolph</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Creative Director</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Christine Jung</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Prototyper</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Eva Ellis</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Prototyper</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Paulina Fiore</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Video Producer</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Filipe Barbosa</p>
-              </div>
-              <div className="text-center">
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Website Designer</p>
-                <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream/70">Nasir Grant</p>
-              </div>
-            </div>
+  {/* UI Designer */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">UI Designer</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/sidneycocimano/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Sidney Cocimano
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+
+  {/* Producer */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Producer</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/miaauy/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Mia Uy
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+
+  {/* Audio Engineer */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Audio Engineer</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/dan-zahal-603899324/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Dan Zahal
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+
+  {/* 3D Artist */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">3D Artist</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/xinyu-jane-yao-3784961b5/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Jane Yao
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+
+  {/* Website Designer */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Website Designer</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/nasir-grant/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Nasir Grant
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+</div>
+
+    {/* Team Credits Grid - Row 2 */}
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+  {/* Technical Lead */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Technical Lead</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/bryson-rudolph/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Bryson Rudolph
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+
+  {/* Creative Director */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Creative Director</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/christinejung426/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Christine Jung
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+
+  {/* Exec. Producer */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Exec. Producer</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/kimgrinfeder/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Kim Grinfeder
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+
+  {/* Prototyper - Eva */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Prototyper</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/eva-ellis-131b36220/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Eva Ellis
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+
+  {/* Prototyper - Paulina */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Prototyper</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="#" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Paulina Fiore
+        {/*<img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />*/}
+      </a>
+    </p>
+  </div>
+
+  {/* Video Producer */}
+  <div className="text-center">
+    <p className="font-display text-xs md:text-sm tracking-wider text-swamp-cream mb-1">Video Producer</p>
+    <p className="font-display text-xs md:text-sm tracking-wider text-primary">
+      <a 
+        href="https://www.linkedin.com/in/filipibarbosa/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-col items-center justify-center gap-1 hover:underline transition-colors"
+      >
+        Filipe Barbosa
+        <img src={LinkedInSm} alt="LinkedIn" className="size-3.5 md:size-4 object-contain" />
+      </a>
+    </p>
+  </div>
+</div>
           </div>
 
           {/* Quote */}

@@ -7,23 +7,23 @@ import worldRestoration from "@/assets/world-restoration.jpg";
 
 const WorldSection = () => {
   const worldImages = [
-    {
-      src: worldZombie,
-      caption: "YOUR PET IGUANAS MUTATED",
-    },
-    {
-      src: worldGator,
-      caption: "PROTECT THE NATIVE SPECIES",
-    },
-    {
-      src: worldContamination,
-      caption: "SHUT OFF PHOSPHORUS RUNOFF",
-    },
-    {
-      src: worldRestoration,
-      caption: "THE FUTURE DEPENDS ON RESTORATION",
-    },
-  ];
+  {
+    src: worldContamination,
+    caption: "INDUSTRIAL FARMING UNLEASHED THE DEAD",
+  },
+  {
+    src: worldZombie,
+    caption: "YOUR PET IGUANAS MUTATED",
+  },
+  {
+    src: worldGator,
+    caption: "OUR NATIVE SPECIES ARE IN DANGER",
+  },
+  {
+    src: worldRestoration,
+    caption: "THE FUTURE DEPENDS ON RESTORATION",
+  },
+];
 
   return (
     <section id="world" className="relative py-24 px-4">
