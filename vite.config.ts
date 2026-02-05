@@ -5,8 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // IMPORTANT: Replace 'YOUR-REPO-NAME' with your actual GitHub repository name
-  base: mode === 'production' ? '/Swampocalypse-VESL/' : '/',
+  base: '/Swampocalypse-VESL/',
   server: {
     host: "::",
     port: 8080,
